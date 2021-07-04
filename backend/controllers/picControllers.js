@@ -14,7 +14,6 @@ const getPics = asyncHandler(async (req, res) => {
                     .status(400)
                     .json({msg: `Cannot get pictures! ${err}`});
             }
-            files.forEach((file) => console.log(file));
             res.status(200).json({
                 message: `Get pics from ${req.params.folder} directory`,
                 pics: files,
@@ -25,7 +24,9 @@ const getPics = asyncHandler(async (req, res) => {
         throw new Error(`Error: Cannot get pictures!`);
     }
 });
-
+// @desc Change names of all pics in a given folder
+// @route PUT api/pics/:folder
+// @access Private
 const updatePicsNames = asyncHandler(async (req, res) => {
     const directory = req.params.folder;
 
