@@ -1,0 +1,22 @@
+{
+  "name": "media_manager",
+  "version": "1.0.0",
+  "description": "Node app for managing media",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "media",
+    "pictures",
+    "videos",
+    "jpg",
+    "avi",
+    "mp4",
+    "mp3",
+    "png",
+    "gif"
+  ],
+  "author": "Arthur Domanski",
+  "license": "ISC"
+}
