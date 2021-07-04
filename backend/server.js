@@ -1,12 +1,16 @@
 const path = require('path');
 const express = require('express');
 const dotenv = require('dotenv');
-
+const picRoutes = require('./routes/picRoutes');
 //initialize dotenv
 dotenv.config();
 //initialize app
 const app = express();
+app.use(express.json());
 
+app.use('/api/pics', picRoutes);
+
+// static folders
 app.use('/music', express.static('music'));
 app.use('/pic', express.static('pic'));
 app.use('/vid', express.static('vid'));
