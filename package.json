@@ -1,22 +1,39 @@
 {
-  "name": "media_manager",
-  "version": "1.0.0",
-  "description": "Node app for managing media",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "media",
-    "pictures",
-    "videos",
-    "jpg",
-    "avi",
-    "mp4",
-    "mp3",
-    "png",
-    "gif"
-  ],
-  "author": "Arthur Domanski",
-  "license": "ISC"
+    "name": "media_manager",
+    "version": "1.0.0",
+    "description": "Node app for managing media",
+    "main": "server.js",
+    "scripts": {
+        "start": "node backend/server",
+        "server": "nodemon backend/server",
+        "client": "npm start --prefix frontend",
+        "dev": "concurrently \"npm run server\" \"npm run client\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MynameisArthur/media_manager"
+    },
+    "keywords": [
+        "media",
+        "pictures",
+        "videos",
+        "jpg",
+        "avi",
+        "mp4",
+        "mp3",
+        "png",
+        "gif"
+    ],
+    "author": "Arthur Domański",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-async-handler": "^1.1.4",
+        "multer": "^1.4.2"
+    },
+    "devDependencies": {
+        "concurrently": "^6.2.0",
+        "nodemon": "^2.0.9"
+    }
 }
