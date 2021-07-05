@@ -65,4 +65,16 @@ const updatePicsNames = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = {getPics, updatePicsNames};
+// @desc Download pic set
+// @route POST api/pics/:folder/downloadSet/:url
+// @access Private
+
+const downloadPicSet = asyncHandler(async (req, res) => {
+    const picsUrl = req.params.url;
+    res.status(201).json({
+        url: picsUrl,
+        message: 'Pictures downloaded',
+    });
+});
+
+module.exports = {getPics, updatePicsNames, downloadPicSet};
